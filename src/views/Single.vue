@@ -2,11 +2,11 @@
     <div id="single" class="main">
         <Header />
         <span class="loading" v-if="loading"></span>
-        <div class="content">
+        <div class="content" v-if="!loading">
             <h1>{{ single.title}}</h1>
             <div>{{ single.body }}</div>
         </div>
-        
+        <Related v-bind:hide="pageId" v-if="!loading" />
         <Footer />
     </div>
 </template>
@@ -16,14 +16,14 @@ import { Component, Vue } from "vue-property-decorator";
 import Posts from '@/services/Posts.js';
 import Header from '../components/layout/Header.vue';
 import Footer from '../components/layout/Footer.vue';
-//import Related from '../components/Related.vue';
+import Related from '../components/Related.vue';
 
 export default {
     name: "Single",
     components: {
       Header,
       Footer,
-      //Related
+      Related
     },
 
     data() {

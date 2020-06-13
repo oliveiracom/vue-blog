@@ -14,7 +14,9 @@ const routes: Array<RouteConfig> = [
   {
     path: "/post/:id",
     name: "Single",
-    component: Single
+    //component: Single
+    component: () =>
+      import(/* webpackChunkName: "Create" */ "../views/Single.vue")
   }
 ];
 

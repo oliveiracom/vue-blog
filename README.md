@@ -1,6 +1,6 @@
 # Vue Blog
 
-Blog Simples criado com VueJs Cli com listagem de posts e leitura de um pots específico.
+Blog Simples criado com VueJs Cli com listagem de posts e leitura de um post específico.
 Por [Caroline Araújo](https://oliveiracomunicacao.com.br/caroline-araujo)
 
 
